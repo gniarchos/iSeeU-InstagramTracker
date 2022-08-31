@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iSeeU-InstagramTracker/static/css/main.2c767e48.css",
+    "main.js": "/iSeeU-InstagramTracker/static/js/main.316bf0ac.js",
+    "index.html": "/iSeeU-InstagramTracker/index.html",
+    "main.2c767e48.css.map": "/iSeeU-InstagramTracker/static/css/main.2c767e48.css.map",
+    "main.316bf0ac.js.map": "/iSeeU-InstagramTracker/static/js/main.316bf0ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c767e48.css",
+    "static/js/main.316bf0ac.js"
+  ]
+}
