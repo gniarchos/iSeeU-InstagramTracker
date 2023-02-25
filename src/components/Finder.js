@@ -44,9 +44,9 @@ export default function Finder() {
     fileReader.onload = (event) => {
       var obj = JSON.parse(event.target.result)
 
-      for (var i = 0; i < obj.relationships_followers.length; i++) {
-        let user = obj.relationships_followers[i].string_list_data[0].value
-        let user_link = obj.relationships_followers[i].string_list_data[0].href
+      for (var i = 0; i < obj.length; i++) {
+        let user = obj[i].string_list_data[0].value
+        let user_link = obj[i].string_list_data[0].href
 
         setFollowers((prevData) => [...prevData, { user, user_link }])
       }
@@ -70,9 +70,11 @@ export default function Finder() {
 
   function showResults() {
     if (
-      document.getElementById("following").files[0]?.name ===
+      (document.getElementById("following").files[0]?.name ===
         "following.json" &&
-      document.getElementById("followers").files[0]?.name === "followers.json"
+        document.getElementById("followers").files[0]?.name ===
+          "followers.json") ||
+      document.getElementById("followers").files[0]?.name === "followers_1.json"
     ) {
       setShowRestart(true)
       setError("")
@@ -104,17 +106,6 @@ export default function Finder() {
       </tr>
     )
   })
-
-  // function exportReportToExcel() {
-  //   let table = document.getElementsByTagName("table") // you can use document.getElementById('tableId') as well by providing id to the table tag
-  //   TableToExcel.convert(table[0], {
-  //     // html code may contain multiple tables so here we are refering to 1st table tag
-  //     name: `export.xlsx`, // fileName you could use any name
-  //     sheet: {
-  //       name: "Sheet 1", // sheetName
-  //     },
-  //   })
-  // }
 
   return (
     <div className={process === true ? "finder-div" : "finder-div-out"}>
@@ -168,7 +159,7 @@ export default function Finder() {
             <div className="upload-divs">
               <div className="upload-title">
                 <span className="titles">Please upload your</span>
-                <span className="titles emfasis"> followers.json</span>
+                <span className="titles emfasis"> followers_1.json</span>
                 <span className="titles"> file below:</span>
               </div>
 

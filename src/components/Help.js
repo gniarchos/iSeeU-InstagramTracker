@@ -115,8 +115,7 @@ export default function Help() {
               <b>Login</b> to your account.
             </li>
             <li className="li-computer">
-              Click your profile picture in the top right-hand corner, then
-              click <b>Settings</b>.
+              Click <b>More</b> in the bottom left, then click <b>Settings</b>.
             </li>
             <li className="li-computer">
               Click <b>Privacy and security.</b>
