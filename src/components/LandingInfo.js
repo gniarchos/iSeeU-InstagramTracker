@@ -3,13 +3,10 @@ import { Icon } from "@iconify/react"
 import { ProcessContext } from "../App"
 
 export default function LandingInfo() {
-  const { process, setProcess, animation, setAnimation } =
-    React.useContext(ProcessContext)
+  const { process, setProcess, animation } = React.useContext(ProcessContext)
 
   function handleAnimationEnding() {
-    // console.log("run")
     setProcess(!process)
-    // setTest(!test)
   }
 
   return (
@@ -21,10 +18,9 @@ export default function LandingInfo() {
         <div className="prolog-about">
           <h1 className="prolog-title">iSeeU Info</h1>
           <p className="prolog-text">
-            iSeeU is a free service for getting anonymously the list of the
-            people who doesn't follow you back on Instagram. With this app you
-            do not have the risk that Instagram will disable or ban your
-            account.
+            iSeeU is a free service for getting anonymously the list of people
+            who don't follow you back on Instagram. With this web app you don't
+            have the risk that Instagram will disable or ban your account.
           </p>
         </div>
 

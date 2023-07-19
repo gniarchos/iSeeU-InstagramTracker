@@ -6,13 +6,9 @@ import logo from "../images/iSeeU-logo-white.png"
 export default function About() {
   const {
     process,
-    setProcess,
-    test,
-    setTest,
     setAnimation,
     animation,
     showRestart,
-    setShowRestart,
     showHelp,
     setShowHelp,
   } = React.useContext(ProcessContext)
@@ -37,13 +33,10 @@ export default function About() {
         <img
           src="https://media.giphy.com/media/IbTZSfHDUDSmOCkd3q/giphy.gif"
           className="insta-logo-gif"
+          alt="instagram-logo"
         />
 
         {process === true && showRestart === false && (
-          // <button className="info-btn">
-          //   <Icon icon="eva:question-mark-circle-fill" />
-          //   Help me
-          // </button>
           <button className="button-proc" onClick={sendHelp}>
             <span className="label">{showHelp === true ? "Back" : "Help"}</span>
             <span className="icon">
@@ -63,10 +56,6 @@ export default function About() {
         )}
 
         {process === true && showRestart === true && (
-          // <button className="info-btn">
-          //   <Icon icon="eva:question-mark-circle-fill" />
-          //   Help me
-          // </button>
           <button
             className="button-proc"
             onClick={() => window.location.reload()}

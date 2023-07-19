@@ -1,22 +1,6 @@
 import React from "react"
-import { ProcessContext } from "../App"
-import check from "../images/check.png"
-import settings from "../images/settings.png"
 
 export default function Help() {
-  const {
-    process,
-    setProcess,
-    test,
-    setTest,
-    setAnimation,
-    animation,
-    showRestart,
-    setShowRestart,
-    showHelp,
-    setShowHelp,
-  } = React.useContext(ProcessContext)
-
   return (
     <div className="help-div">
       <h1>Help: How to download the required files</h1>
@@ -48,14 +32,10 @@ export default function Help() {
               profile.
             </li>
             <li className="li-mobile">
-              Tap <b>Settings</b> in the top left.
+              Tap <b>Your Activity</b>.
             </li>
             <li className="li-mobile">
-              Tap <b>Privacy and security.</b>
-            </li>
-            <li className="li-mobile">
-              Scroll down to <b>Data download</b> and tap{" "}
-              <b> Request download.</b>
+              Tap <b>Download your information.</b>
             </li>
             <li className="li-mobile">
               Enter the email address where you'd like to receive a link to your
@@ -88,12 +68,12 @@ export default function Help() {
             </li>
             <li className="li-mobile">
               The required files you will need to upload are
-              <b> following.json</b> and <b>followers.json.</b>
+              <b> following.json</b> and <b>followers_1.json.</b>
             </li>
           </ol>
 
           <p>
-            <b>Note:</b> Instagram states that it may take up to 14 days for
+            <b>Note:</b> Instagram states that it may take up to 30 days for
             them to email you a download link, but usually you will receive the
             email sooner (from minutes to hours).
           </p>
@@ -115,14 +95,11 @@ export default function Help() {
               <b>Login</b> to your account.
             </li>
             <li className="li-computer">
-              Click <b>More</b> in the bottom left, then click <b>Settings</b>.
+              Click <b>More</b> in the bottom left, then click{" "}
+              <b>Your Activity</b>.
             </li>
             <li className="li-computer">
-              Click <b>Privacy and security.</b>
-            </li>
-            <li className="li-computer">
-              Scroll down to <b>Data download</b> and click
-              <b>Request download.</b>
+              Click <b>Download your information</b>
             </li>
             <li className="li-computer">
               Enter the email address where you'd like to receive a link to your
@@ -155,12 +132,12 @@ export default function Help() {
             </li>
             <li className="li-computer">
               The required files you will need to upload are
-              <b> following.json</b> and <b>followers.json.</b>
+              <b> following.json</b> and <b>followers_1.json.</b>
             </li>
           </ol>
 
           <p>
-            <b>Note:</b> Instagram states that it may take up to 14 days for
+            <b>Note:</b> Instagram states that it may take up to 30 days for
             them to email you a download link, but usually you will receive the
             email sooner (from minutes to hours).
           </p>

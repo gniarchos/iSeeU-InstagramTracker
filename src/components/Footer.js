@@ -8,7 +8,7 @@ export default function Footer(props) {
 
   return (
     <footer className="footer-global">
-      <p>© 2022 Giannis Niarchos </p>
+      <p>Giannis Niarchos © 2022-2023 </p>
       <div onClick={gotoGithub} className="github-div">
         <Icon className="git-img" icon="ant-design:github-filled" width="29" />
         <p>Source Code</p>

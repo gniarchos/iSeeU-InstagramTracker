@@ -3,8 +3,7 @@ import { ProcessContext } from "../App"
 import { Icon } from "@iconify/react"
 
 export default function Finder() {
-  const { process, setProcess, showRestart, setShowRestart } =
-    React.useContext(ProcessContext)
+  const { process, setShowRestart } = React.useContext(ProcessContext)
 
   const [following, setFollowing] = React.useState([])
   const [followers, setFollowers] = React.useState([])
@@ -61,9 +60,9 @@ export default function Finder() {
       return (
         otherArray.filter(function (other) {
           return (
-            other.user == current.user && other.user_link == current.user_link
+            other.user === current.user && other.user_link === current.user_link
           )
-        }).length == 0
+        }).length === 0
       )
     }
   }
@@ -86,8 +85,6 @@ export default function Finder() {
       )
     }
   }
-
-  console.log(unfollowers)
 
   const unfollowersList = unfollowers.map((unfol, index) => {
     return (
