@@ -3,7 +3,7 @@ import React from "react"
 export default function Help() {
   return (
     <div className="help-div">
-      <h1>Help: How to download the required files</h1>
+      <h1>Help: How to download your files</h1>
       <p className="help-source">
         Source:
         <a href="https://help.instagram.com/181231772500920">
@@ -150,8 +150,8 @@ export default function Help() {
 
           <div className="help-app-answer">
             <p>
-              Sorry, you can't. This method works only with browser version of
-              Instagram. For more info see above.
+              This method works only with browser version of Instagram. For more
+              info see above.
             </p>
           </div>
         </div>

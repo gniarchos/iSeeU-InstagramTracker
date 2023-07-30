@@ -109,8 +109,8 @@ export default function Finder() {
       <div className="finder-container">
         {showReport === false && (
           <div className="prolog-finder">
-            <h1>Files Selection</h1>
-            <p className="prolog-text">
+            <h1 className="finder-title">Files Selection</h1>
+            <p className="prolog-text finder">
               Upload the required files and get a list of users who don't follow
               you back. If you need help to download these files click the
               button above.
@@ -124,7 +124,7 @@ export default function Finder() {
               <div className="upload-title">
                 <span className="titles">Please upload your</span>
                 <span className="titles emfasis"> following.json</span>
-                <span className="titles"> file below:</span>
+                <span className="titles"> file:</span>
               </div>
 
               <div className="file-wrapper">
@@ -157,7 +157,7 @@ export default function Finder() {
               <div className="upload-title">
                 <span className="titles">Please upload your</span>
                 <span className="titles emfasis"> followers_1.json</span>
-                <span className="titles"> file below:</span>
+                <span className="titles"> file:</span>
               </div>
 
               <div className="file-wrapper">
@@ -192,7 +192,7 @@ export default function Finder() {
           <p className="error-text">{error}</p>
         )}
         {showReport === false && (
-          <button className="button-proc" onClick={showResults}>
+          <button className="button-proc results" onClick={showResults}>
             <span className="label">upload</span>
             <span className="icon">
               <Icon icon="dashicons:cloud-upload" width="25" height="25" />

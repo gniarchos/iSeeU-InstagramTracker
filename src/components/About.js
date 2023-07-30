@@ -24,7 +24,12 @@ export default function About() {
   return (
     <div className="about-container">
       <nav>
-        <img src={logo} onClick={() => window.location.reload()} alt="logo" />
+        <img
+          className="logo-img"
+          src={logo}
+          onClick={() => window.location.reload()}
+          alt="logo"
+        />
       </nav>
       <div className="about">
         <h1 className="main-title">
