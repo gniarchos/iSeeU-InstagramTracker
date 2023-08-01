@@ -16,9 +16,9 @@ More info can be found at [Instagram Help Center](https://help.instagram.com/181
 
 - No account need it
 - No login to Instagram need it
-- List of all the users that dont' follow you back
+- List of all the users that don't follow you back
 - Links to their profiles
-- PWA (standalone app) compatible
+- PWA (standalone app) compatibility
 
 ## 🚧 Made with
 
