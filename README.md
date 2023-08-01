@@ -6,7 +6,7 @@ This project uses original Instagram files provided by user.
 
 Made with React.
 
-## 🎮 How use it
+## 🎮 How to use it
 
 More info can be found at [Instagram Help Center](https://help.instagram.com/181231772500920).
 
