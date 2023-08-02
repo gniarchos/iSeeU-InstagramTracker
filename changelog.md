@@ -4,6 +4,7 @@
 
 - Added a link to my portfolio in footer
 - Uploaded changelog.md file on github
+- Added version on footer
 
 ### Updated
 

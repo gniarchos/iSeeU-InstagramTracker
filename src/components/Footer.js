@@ -25,6 +25,7 @@ export default function Footer(props) {
           Source Code
         </a>
       </div>
+      <p>v1.1.1</p>
     </footer>
   )
 }
