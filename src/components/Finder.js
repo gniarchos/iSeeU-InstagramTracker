@@ -111,9 +111,9 @@ export default function Finder() {
           <div className="prolog-finder">
             <h1 className="finder-title">Files Selection</h1>
             <p className="prolog-text finder">
-              Upload the required files and get a list of users who don't follow
-              you back. If you need help to download these files click the
-              button above.
+              Upload the necessary files to obtain a list of users who don't
+              follow you back. If you require assistance with downloading these
+              files, click the HELP button above.
             </p>
           </div>
         )}

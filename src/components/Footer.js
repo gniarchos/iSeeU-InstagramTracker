@@ -2,16 +2,28 @@ import React from "react"
 import { Icon } from "@iconify/react"
 
 export default function Footer(props) {
-  function gotoGithub() {
-    window.location.href = "https://github.com/gniarchos/iSeeU-InstagramTracker"
-  }
-
   return (
     <footer className="footer-global">
-      <p>Giannis Niarchos © 2022-2023 </p>
-      <div onClick={gotoGithub} className="github-div">
+      <div className="copyright-wrapper">
+        <a
+          href="https://gniarchos.github.io/portfolio/"
+          target="_blank"
+          className="copyright link-portfolio"
+        >
+          Giannis Niarchos
+        </a>
+        <h4 className="copyright"> © 2022-2023 </h4>
+      </div>
+
+      <div className="github-div">
         <Icon className="git-img" icon="ant-design:github-filled" width="29" />
-        <p>Source Code</p>
+        <a
+          href="https://github.com/gniarchos/iSeeU-InstagramTracker"
+          target="_blank"
+          className="source-link"
+        >
+          Source Code
+        </a>
       </div>
     </footer>
   )

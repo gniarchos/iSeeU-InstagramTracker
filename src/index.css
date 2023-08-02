@@ -291,6 +291,32 @@ nav {
   color: #2d2a2a;
 }
 
+.copyright-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.copyright {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.link-portfolio {
+  color: #2d2a2a;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.source-link {
+  color: #2d2a2a;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .github-div {
   display: flex;
   flex-direction: row;

@@ -150,8 +150,8 @@ export default function Help() {
 
           <div className="help-app-answer">
             <p>
-              This method works only with browser version of Instagram. For more
-              info see above.
+              This method only works with browser version of Instagram. For more
+              information, please refer to the section above.
             </p>
           </div>
         </div>
