@@ -1,3 +1,17 @@
+# Changelog
+
+## [1.1.2] - 6-10-2023
+
+### Updated
+
+- Updated the footer
+
+### Removed
+
+- Removed unused code
+
+---
+
 ## [1.1.1] - 2-8-2023
 
 ### Added
