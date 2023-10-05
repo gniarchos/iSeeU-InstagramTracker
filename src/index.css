@@ -287,8 +287,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  height: 200px;
   color: #2d2a2a;
+  padding: 20px;
 }
 
 .copyright-wrapper {
@@ -520,7 +520,6 @@ li {
 @media all and (max-width: 500px) {
   .logo-img {
     width: 80px;
-    /* cursor: pointer; */
   }
 
   .prolog-text {
@@ -644,18 +643,6 @@ li {
   }
 
   table {
-    /* margin-top: 30px;
-  background: radial-gradient(
-    circle at 4% 107%,
-    rgba(252, 239, 95, 0.9) 0%,
-
-    hsl(5, 98%, 64%, 0.9) 35%,
-    hsl(319, 71%, 49%, 0.8) 60%
-  );
-  background-attachment: fixed;
-  border-radius: 15px;
-  padding: 20px;
-  color: white; */
     width: 98vw;
     padding: 10px;
   }
