@@ -12,7 +12,7 @@ export default function Footer(props) {
         >
           Giannis Niarchos
         </a>
-        <h4 className="copyright"> © 2022-2023 </h4>
+        <h4 className="copyright"> © 2023 </h4>
       </div>
 
       <div className="github-div">
@@ -25,7 +25,6 @@ export default function Footer(props) {
           Source Code
         </a>
       </div>
-      <p>v1.1.1</p>
     </footer>
   )
 }
