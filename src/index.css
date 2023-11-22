@@ -506,6 +506,7 @@ li {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  white-space: nowrap;
 }
 
 @media all and (max-width: 500px) {
@@ -567,6 +568,10 @@ li {
   .unfollowers-list h1 {
     font-size: 1.4rem;
     margin-bottom: 40px;
+  }
+
+  .help-source {
+    font-size: 0.9rem;
   }
 
   .help-div h1 {
