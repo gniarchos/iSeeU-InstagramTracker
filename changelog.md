@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.3] - 22-11-2023
+
+### Added
+
+- Added the date that help section information was updated.
+
+### Updated
+
+- Updated the help information to keep up with new Instagram UI and procedure.
+
+---
+
 ## [1.1.2] - 6-10-2023
 
 ### Updated
