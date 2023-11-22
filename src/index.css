@@ -482,10 +482,6 @@ a:hover {
   background: #ffffff;
 }
 
-.help-app-answer {
-  margin: 30px;
-}
-
 .help-title-div {
   background: #f04765;
   color: white;
@@ -510,11 +506,6 @@ li {
   display: flex;
   flex-direction: row;
   gap: 5px;
-}
-
-.help-app-answer p {
-  margin-left: 0px;
-  font-size: 1.1rem;
 }
 
 @media all and (max-width: 500px) {
@@ -636,10 +627,6 @@ li {
 
   .help-title-div {
     width: 95vw;
-  }
-
-  .help-app-answer p {
-    font-size: 1rem;
   }
 
   table {
