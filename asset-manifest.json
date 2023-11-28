@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/iSeeU-InstagramTracker/static/css/main.97ebd239.css",
-    "main.js": "/iSeeU-InstagramTracker/static/js/main.7164e9f1.js",
+    "main.css": "/iSeeU-InstagramTracker/static/css/main.b90c5995.css",
+    "main.js": "/iSeeU-InstagramTracker/static/js/main.81ae6258.js",
     "index.html": "/iSeeU-InstagramTracker/index.html",
-    "main.97ebd239.css.map": "/iSeeU-InstagramTracker/static/css/main.97ebd239.css.map",
-    "main.7164e9f1.js.map": "/iSeeU-InstagramTracker/static/js/main.7164e9f1.js.map"
+    "main.b90c5995.css.map": "/iSeeU-InstagramTracker/static/css/main.b90c5995.css.map",
+    "main.81ae6258.js.map": "/iSeeU-InstagramTracker/static/js/main.81ae6258.js.map"
   },
   "entrypoints": [
-    "static/css/main.97ebd239.css",
-    "static/js/main.7164e9f1.js"
+    "static/css/main.b90c5995.css",
+    "static/js/main.81ae6258.js"
   ]
 }
