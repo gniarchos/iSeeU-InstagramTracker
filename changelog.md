@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.4] - 28-11-2023
+
+### Updated
+
+- Updated the error message when uploading wrong files and changed its position.
+- Improved the UI of the app.
+
+### Fixed
+
+- Fixed some typos.
+- Fixed "Upload" button wrong position.
+- Fixed in selection files page the container size that caused UI issues on mobile.
+
+---
+
 ## [1.1.3] - 22-11-2023
 
 ### Added
