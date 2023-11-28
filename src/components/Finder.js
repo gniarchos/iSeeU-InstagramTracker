@@ -80,23 +80,21 @@ export default function Finder() {
       setUnfollowers(following.filter(comparer(followers)))
       setShowReport(true)
     } else {
-      setError(
-        "Warning: Files are not correct, please check the files and try again."
-      )
+      setError("No correct files selected! Please try again.")
     }
   }
 
-  const unfollowersList = unfollowers.map((unfol, index) => {
+  const unfollowersList = unfollowers.map((user, index) => {
     return (
       <tr>
         <td>
           <p>{index + 1}</p>
         </td>
         <td>
-          <p>{unfol.user}</p>
+          <p>{user.user}</p>
         </td>
         <td>
-          <a href={unfol.user_link} className="profile-link">
+          <a href={user.user_link} className="profile-link">
             Visit Profile
           </a>
         </td>
@@ -118,12 +116,19 @@ export default function Finder() {
           </div>
         )}
 
+        {error !== "" && showReport === false && (
+          <p className="error-text">
+            <Icon icon="iconoir:chat-bubble-xmark" width={25} />
+            {error}
+          </p>
+        )}
+
         {showReport === false && (
           <div className="choosing-file-div">
             <div className="upload-divs">
               <div className="upload-title">
-                <span className="titles">Please upload your</span>
-                <span className="titles emfasis"> following.json</span>
+                <span className="titles">Please upload your </span>
+                <span className="titles emphasis">following.json</span>
                 <span className="titles"> file:</span>
               </div>
 
@@ -155,8 +160,8 @@ export default function Finder() {
 
             <div className="upload-divs">
               <div className="upload-title">
-                <span className="titles">Please upload your</span>
-                <span className="titles emfasis"> followers_1.json</span>
+                <span className="titles">Please upload your </span>
+                <span className="titles emphasis">followers_1.json</span>
                 <span className="titles"> file:</span>
               </div>
 
@@ -188,9 +193,6 @@ export default function Finder() {
           </div>
         )}
 
-        {error !== "" && showReport === false && (
-          <p className="error-text">{error}</p>
-        )}
         {showReport === false && (
           <button className="button-proc results" onClick={showResults}>
             <span className="label">upload</span>
@@ -202,7 +204,10 @@ export default function Finder() {
 
         {showReport === true && (
           <div className="unfollowers-list">
-            <h1>Users who don't follow you back</h1>
+            <div className="prolog-finder">
+              <h1>Users who don't follow you back</h1>
+              <p className="prolog-text finder truth">The moment of truth.</p>
+            </div>
             <table>
               <tbody>
                 <tr>

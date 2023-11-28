@@ -82,9 +82,8 @@ nav {
   color: #2d2a2a;
 }
 
-.emfasis {
+.emphasis {
   font-weight: 700;
-  text-decoration: underline;
   font-size: 1.5rem;
 }
 
@@ -154,7 +153,7 @@ nav {
 }
 
 .insta-logo-gif {
-  width: 150px;
+  width: 120px;
 }
 
 .upload-divs {
@@ -176,8 +175,6 @@ nav {
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: -20px;
 }
 
 .button-proc::before {
@@ -277,7 +274,7 @@ nav {
 }
 
 .results {
-  margin-bottom: -50px;
+  margin-bottom: 60px;
 }
 
 .footer-global {
@@ -352,9 +349,9 @@ nav {
   align-items: center;
   justify-content: space-around;
   gap: 1%;
-  margin: 7vw;
   margin-top: 80px;
   opacity: 0;
+  margin-bottom: 50px;
 }
 
 @keyframes goingIn {
@@ -379,6 +376,10 @@ nav {
   gap: 30px;
 }
 
+.truth {
+  margin-top: -20px;
+}
+
 table {
   margin-top: 30px;
   background: radial-gradient(
@@ -399,6 +400,7 @@ td {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.11);
   color: white;
+  text-shadow: 1px 1px 2px rgb(138, 138, 138);
 }
 
 td:first-child {
@@ -424,12 +426,17 @@ th:first-child {
 }
 
 .error-text {
-  background: #ed1c24;
+  background: #f14c51e1;
   color: white;
   padding: 8px;
   border-radius: 5px;
   font-size: 0.9rem;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-link {
@@ -510,8 +517,12 @@ li {
 }
 
 @media all and (max-width: 500px) {
+  nav {
+    padding: 15px;
+  }
+
   .logo-img {
-    width: 80px;
+    width: 70px;
   }
 
   .prolog-text {
@@ -549,7 +560,7 @@ li {
   }
 
   .insta-logo-gif {
-    width: 120px;
+    width: 100px;
     margin-bottom: 10px;
   }
 
@@ -636,10 +647,19 @@ li {
 
   table {
     width: 98vw;
-    padding: 10px;
+    padding: 8px;
   }
 
   th {
     font-size: 1rem;
+  }
+
+  .error-text {
+    border-radius: 0;
+    margin-bottom: -20px;
+  }
+
+  .truth {
+    margin-top: -60px;
   }
 }
