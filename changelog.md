@@ -12,6 +12,7 @@
 - Fixed some typos.
 - Fixed "Upload" button wrong position.
 - Fixed in selection files page the container size that caused UI issues on mobile.
+- Fixed PWA's splash screen image to work in all mobile phones.
 
 ---
 
