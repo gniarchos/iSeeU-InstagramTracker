@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="version" content="1.1.2" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -43,7 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       href="%PUBLIC_URL%/public-images/iphone5_splash.png?"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image"
@@ -92,7 +91,11 @@
       href="%PUBLIC_URL%/public-images/ipadpro2_splash.png?"
       media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image"
-    />
+    /> -->
+    <script src="https://unpkg.com/ios-pwa-splash@1.0.0/cdn.min.js"></script>
+    <script>
+      iosPWASplash("%PUBLIC_URL%/public-images/original.png?", "#ffffff")
+    </script>
     <title>iSeeU - Unfollowers Finder</title>
   </head>
   <body>
