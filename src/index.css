@@ -393,6 +393,7 @@ table {
   border-radius: 15px;
   padding: 20px;
   color: white;
+  width: 70%;
 }
 
 td {
@@ -416,13 +417,8 @@ th {
   font-size: 1.2rem;
   font-weight: bolder;
   color: white;
-  width: 40vw;
   font-weight: 700;
   white-space: nowrap;
-}
-
-th:first-child {
-  width: 10vw;
 }
 
 .error-text {
@@ -457,6 +453,14 @@ th:first-child {
 
 a:hover {
   background-size: 0 3px, 100% 3px;
+}
+
+.unfollowers-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 .unfollowers-list h1 {
@@ -648,6 +652,28 @@ li {
   table {
     width: 98vw;
     padding: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  td {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  td:nth-child(1) {
+    max-width: 50px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  td:nth-child(3) {
+    width: 30px;
+  }
+
+  tr {
+    width: 80%;
   }
 
   th {
