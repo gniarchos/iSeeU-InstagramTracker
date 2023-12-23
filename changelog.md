@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.5] - 23-12-2023
+
+### Fixed
+
+- Fixed results table to overflow the page if the usernames in the second column was too long in mobile.
+
+---
+
 ## [1.1.4] - 28-11-2023
 
 ### Updated
