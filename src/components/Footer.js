@@ -12,11 +12,11 @@ export default function Footer(props) {
         >
           Giannis Niarchos
         </a>
-        <h4 className="copyright"> © 2023 </h4>
+        <h4 className="copyright"> © {new Date().getFullYear()} </h4>
       </div>
 
       <div className="github-div">
-        <Icon className="git-img" icon="ant-design:github-filled" width="29" />
+        <Icon className="git-img" icon="ant-design:github-filled" width="22" />
         <a
           href="https://github.com/gniarchos/iSeeU-InstagramTracker"
           target="_blank"
