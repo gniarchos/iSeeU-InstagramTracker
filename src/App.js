@@ -1,5 +1,5 @@
 import "./index.css"
-import About from "./components/About"
+import Navigator from "./components/Navigator"
 import LandingInfo from "./components/LandingInfo"
 import Footer from "./components/Footer"
 import Finder from "./components/Finder"
@@ -33,7 +33,7 @@ function App() {
           helpRef,
         }}
       >
-        <About />
+        <Navigator />
         {process === false && showHelp === false && <LandingInfo />}
         {process === true && showHelp === false && <Finder />}
         {showHelp === true && <Help />}
