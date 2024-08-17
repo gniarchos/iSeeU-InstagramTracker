@@ -26,34 +26,31 @@ export default function LandingInfo() {
 
         <div className="landing-divs-wrapper">
           <div className="facts-div">
-            {/* <Icon icon="carbon:login" color="#F04765" /> */}
-            <Icon icon="ic:outline-log-in" color="#F04765" width={60} />
+            <Icon
+              icon="material-symbols:no-accounts"
+              color="#F04765"
+              width={60}
+            />
             <h4 className="facts-title">No account needed</h4>
             <p className="facts-subtitle">
-              There's no need to log in to your Instagram account through this
-              app.
+              There's <b>no need to login</b> to your Instagram account through
+              this app.
             </p>
           </div>
           <div className="facts-div">
             <Icon icon="ooui:user-anonymous" color="#F04765" width={60} />
             <h4 className="facts-title">100% anonymity</h4>
             <p className="facts-subtitle">
-              You will remain completely anonymous. We do not store or collect
-              any of your personal information - the files you upload do not
-              contain any personal info.
+              You will remain completely <b>anonymous</b>. We do not store or
+              collect <b>any</b> of your personal information.
             </p>
           </div>
           <div className="facts-div">
-            {/* <Icon icon="ooui:user-anonymous" color="#F04765" width={70} /> */}
-            <Icon
-              icon="akar-icons:circle-check-fill"
-              color="#F04765"
-              width={60}
-            />
+            <Icon icon="mage:checklist-note-fill" color="#F04765" width={60} />
             <h4 className="facts-title">Fast and easy</h4>
             <p className="facts-subtitle">
               With a few easy steps, you will have the list of all the people
-              who don't follow you back on Instagram.
+              who <b>don't follow you back</b> on Instagram.
             </p>
           </div>
         </div>
