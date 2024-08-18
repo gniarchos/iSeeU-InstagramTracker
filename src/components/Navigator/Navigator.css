@@ -1,0 +1,83 @@
+.navigator-container {
+  background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, #f4f3f7 100%);
+  background-blend-mode: overlay;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  margin-bottom: 0;
+}
+
+.logo-img {
+  width: 90px;
+  cursor: pointer;
+}
+
+.navigator-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: white;
+}
+
+.navigator-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.insta-logo-gif {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .navigator-container {
+    background: radial-gradient(
+        circle at 5% 60%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, #f4f3f7 100%);
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .logo-img {
+    width: 60px;
+  }
+
+  .navigator-title {
+    margin-top: -30px;
+    font-size: 1.1rem;
+  }
+
+  .insta-logo-gif {
+    width: 60px;
+  }
+
+  .app-actions-button {
+    padding: 8px 8px;
+  }
+}

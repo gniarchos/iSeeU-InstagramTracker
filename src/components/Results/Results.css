@@ -1,0 +1,131 @@
+.results-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.results-about-text {
+  width: 50vw;
+  text-align: center;
+  font-weight: 300;
+  color: #666262b9;
+}
+
+table {
+  margin-top: 30px;
+  background: radial-gradient(
+    circle at 50% 108%,
+    rgba(252, 239, 95, 0.9) 0%,
+    hsl(5, 98%, 64%, 0.9) 35%,
+    hsl(319, 71%, 49%, 0.8) 60%
+  );
+  border-radius: 8px;
+  /* padding: 10px; */
+  color: white;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.11);
+  color: white;
+  text-shadow: 1px 1px 2px rgb(138, 138, 138);
+  border-radius: 5px;
+}
+
+td:first-child {
+  font-weight: 700;
+}
+
+/* td:last-child {
+  padding: 0;
+} */
+
+th {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.results-profile-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* padding: 10px 20px; */
+  /* border-radius: 5px; */
+  /* border: 1px solid white; */
+  /* background: linear-gradient(to right, rgb(255, 255, 255), rgb(163, 221, 221)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms; */
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+@media (max-width: 768px) {
+  .results-info {
+    margin-top: -40px;
+  }
+
+  .results-title {
+    margin-top: -8px;
+    font-size: 1.2rem;
+  }
+
+  .results-about-text {
+    font-size: 0.9rem;
+    width: 90vw;
+    font-weight: 200;
+    margin-top: -30px;
+  }
+
+  table {
+    width: 95vw;
+  }
+
+  th {
+    font-size: 0.8rem;
+    padding: 5px;
+    white-space: wrap;
+  }
+
+  td {
+    font-size: 0.8rem;
+    padding: 9px;
+  }
+
+  td:nth-child(2) {
+    max-width: 50px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+}
