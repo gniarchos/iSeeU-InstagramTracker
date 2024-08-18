@@ -18,7 +18,7 @@ export default function Results({ notFollowingBack }) {
       return (
         <tr>
           <td>{index + 1}</td>
-          <td>{user.username}</td>
+          <td>{user.user}</td>
           <td>{formattedDate}</td>
           <td>
             <a
