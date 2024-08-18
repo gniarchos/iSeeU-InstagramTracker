@@ -1,20 +1,20 @@
 import "./index.css"
-import Navigator from "./components/Navigator"
-import LandingInfo from "./components/LandingInfo"
-import Footer from "./components/Footer"
-import Finder from "./components/Finder"
-import React from "react"
-import Help from "./components/Help"
+import Navigator from "./components/Navigator/Navigator"
+import LandingInfo from "./components/LandingInfo/LandingInfo"
+import Footer from "./components/Footer/Footer"
+import Finder from "./components/Finder/Finder"
+import React, { useRef, createContext, useState } from "react"
+import Help from "./components/Help/Help"
 
-export const ProcessContext = React.createContext()
+export const ProcessContext = createContext()
 
 function App() {
-  const [process, setProcess] = React.useState(false)
-  const [test, setTest] = React.useState(false)
-  const [animation, setAnimation] = React.useState(false)
-  const [showRestart, setShowRestart] = React.useState(false)
-  const [showHelp, setShowHelp] = React.useState(false)
-  const helpRef = React.useRef()
+  const [process, setProcess] = useState(false)
+  const [test, setTest] = useState(false)
+  const [animation, setAnimation] = useState(false)
+  const [showRestart, setShowRestart] = useState(false)
+  const [showHelp, setShowHelp] = useState(false)
+  const helpRef = useRef()
 
   return (
     <div>
