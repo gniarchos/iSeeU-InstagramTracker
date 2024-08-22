@@ -1,7 +1,12 @@
 // public/service-worker.js
 
 const CACHE_NAME = "my-app-cache-v2"
-const urlsToCache = ["/", "/index.html" /* other assets */]
+const urlsToCache = [
+  "/",
+  "/index.html", // The main HTML file
+  "/static/js/main.js", // Other assets
+  "/static/css/main.css",
+]
 
 // Install the service worker
 self.addEventListener("install", (event) => {
