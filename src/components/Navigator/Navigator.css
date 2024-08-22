@@ -9,7 +9,6 @@
     ),
     linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, #f4f3f7 100%);
   background-blend-mode: overlay;
-  padding-top: 55px;
 }
 
 nav {
@@ -46,6 +45,12 @@ nav {
 
 .insta-logo-gif {
   width: 120px;
+}
+
+@media (display-mode: standalone) {
+  .navigator-container {
+    padding-top: 55px;
+  }
 }
 
 @media (max-width: 768px) {
