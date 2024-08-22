@@ -1,6 +1,6 @@
 // public/service-worker.js
 
-const CACHE_NAME = "my-app-cache-v2"
+const CACHE_NAME = "my-app-cache-v3"
 const urlsToCache = [
   "/",
   "/index.html", // The main HTML file
