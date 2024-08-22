@@ -3,11 +3,11 @@
 const CACHE_NAME = "my-app-cache-v4"
 const urlsToCache = [
   "/",
-  "/index.html", // The main HTML file
-  "/static/js/main.js",
-  "/static/css/main.css",
-  "/manifest.json",
-  "/service-worker.js",
+  "%PUBLIC_URL%/index.html", // The main HTML file
+  "%PUBLIC_URL%/static/js/main.js",
+  "%PUBLIC_URL%/static/css/main.css",
+  "%PUBLIC_URL%/manifest.json",
+  "%PUBLIC_URL%/service-worker.js",
 ]
 
 // Install the service worker
