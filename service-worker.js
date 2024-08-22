@@ -1,9 +1,7 @@
-// public/service-worker.js
-
 const CACHE_NAME = "my-app-cache-v5"
 const urlsToCache = [
   "/",
-  "https://gniarchos.github.io/iSeeU-InstagramTracker/index.html", // The main HTML file
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/index.html",
   "https://gniarchos.github.io/iSeeU-InstagramTracker/static/js/main.js",
   "https://gniarchos.github.io/iSeeU-InstagramTracker/static/css/main.css",
   "https://gniarchos.github.io/iSeeU-InstagramTracker/manifest.json",
@@ -42,33 +40,22 @@ self.addEventListener("activate", (event) => {
       )
     })
   )
+})
 
-  if (url.pathname === "/") {
-    event.respondWith(
-      fetch(event.request).then((response) => {
-        return response.text().then((text) => {
-          // Parse the HTML and check for the meta tag
-          const parser = new DOMParser()
-          const doc = parser.parseFromString(text, "text/html")
-          const metaTag = doc.querySelector(
-            'meta[name="apple-mobile-web-app-status-bar-style"]'
-          )
+// Handle meta tag updates
+let cachedMetaTagContent = ""
 
-          // If the meta tag exists and has a different value, update the cache
-          if (metaTag && metaTag.content !== "black-translucent") {
-            const cache = caches.open(precacheCacheName).then((cache) => {
-              return cache.put(event.request, response.clone())
-            })
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "META_TAG_CONTENT") {
+    const newMetaTagContent = event.data.content
 
-            // Trigger a refresh to update the UI
-            clients.claim().then(() => {
-              window.location.reload()
-            })
-          }
+    // Check if the meta tag content has changed
+    if (newMetaTagContent !== cachedMetaTagContent) {
+      cachedMetaTagContent = newMetaTagContent
 
-          return response
-        })
-      })
-    )
+      // Optionally update cache or trigger cache refresh
+      self.skipWaiting() // Forces the waiting service worker to become the active service worker
+      // Example: caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+    }
   }
 })
