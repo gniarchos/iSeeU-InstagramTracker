@@ -3,11 +3,11 @@
 const CACHE_NAME = "my-app-cache-v5"
 const urlsToCache = [
   "/",
-  "%PUBLIC_URL%/index.html", // The main HTML file
-  "%PUBLIC_URL%/static/js/main.js",
-  "%PUBLIC_URL%/static/css/main.css",
-  "%PUBLIC_URL%/manifest.json",
-  "%PUBLIC_URL%/service-worker.js",
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/index.html", // The main HTML file
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/static/js/main.js",
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/static/css/main.css",
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/manifest.json",
+  "https://gniarchos.github.io/iSeeU-InstagramTracker/service-worker.js",
 ]
 
 // Install the service worker
