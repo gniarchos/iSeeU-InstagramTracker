@@ -54,10 +54,15 @@ self.addEventListener("activate", (event) => {
             'meta[name="apple-mobile-web-app-status-bar-style"]'
           )
 
-          // If the meta tag exists, handle it accordingly
-          if (metaTag) {
+          // If the meta tag exists and has a different value, update the cache
+          if (metaTag && metaTag.content !== "black-translucent") {
             const cache = caches.open(precacheCacheName).then((cache) => {
               return cache.put(event.request, response.clone())
+            })
+
+            // Trigger a refresh to update the UI
+            clients.claim().then(() => {
+              window.location.reload()
             })
           }
 
