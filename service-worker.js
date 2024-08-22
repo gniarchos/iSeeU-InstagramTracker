@@ -42,4 +42,28 @@ self.addEventListener("activate", (event) => {
       )
     })
   )
+
+  if (url.pathname === "/") {
+    event.respondWith(
+      fetch(event.request).then((response) => {
+        return response.text().then((text) => {
+          // Parse the HTML and check for the meta tag
+          const parser = new DOMParser()
+          const doc = parser.parseFromString(text, "text/html")
+          const metaTag = doc.querySelector(
+            'meta[name="apple-mobile-web-app-status-bar-style"]'
+          )
+
+          // If the meta tag exists, handle it accordingly
+          if (metaTag) {
+            const cache = caches.open(precacheCacheName).then((cache) => {
+              return cache.put(event.request, response.clone())
+            })
+          }
+
+          return response
+        })
+      })
+    )
+  }
 })
