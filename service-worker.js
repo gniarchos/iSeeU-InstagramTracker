@@ -4,8 +4,10 @@ const CACHE_NAME = "my-app-cache-v2"
 const urlsToCache = [
   "/",
   "/index.html", // The main HTML file
-  "/static/js/main.js", // Other assets
+  "/static/js/main.js",
   "/static/css/main.css",
+  "/manifest.json",
+  "/service-worker.js",
 ]
 
 // Install the service worker
