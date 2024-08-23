@@ -69,6 +69,17 @@ export default function About() {
             <i className="animation"></i>
           </button>
         )}
+
+        <span className="navigator-pwa-info">
+          <Icon icon="fluent:info-12-filled" />
+          If the app looks broken, please re-install it from{""}
+          <a
+            href="https://gniarchos.github.io/iSeeU-InstagramTracker/"
+            target="_blank"
+          >
+            iSeeU page.
+          </a>
+        </span>
       </div>
     </div>
   )
