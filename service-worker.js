@@ -10,11 +10,7 @@ const urlsToCache = [
 
 // Install the service worker
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache)
-    })
-  )
+  self.skipWaiting() // Forces the new worker to activate immediately
 })
 
 // Intercept fetch requests
@@ -28,35 +24,24 @@ self.addEventListener("fetch", (event) => {
 
 // Activate the service worker
 self.addEventListener("activate", (event) => {
-  const cacheWhitelist = [CACHE_NAME]
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (!cacheWhitelist.includes(cacheName)) {
-            alert(`Deleting cache: ${cacheName}`)
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
+    caches
+      .keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (!cacheWhitelist.includes(cacheName)) {
+              console.log(`Deleting old cache: ${cacheName}`)
+              return caches.delete(cacheName)
+            }
+          })
+        )
+      })
+      .then(() => {
+        return clients.claim()
+      })
+      .catch((err) => {
+        console.error("Failed to clean up old caches:", err)
+      })
   )
 })
-
-// Handle meta tag updates
-// let cachedMetaTagContent = ""
-
-// self.addEventListener("message", (event) => {
-//   if (event.data && event.data.type === "META_TAG_CONTENT") {
-//     const newMetaTagContent = event.data.content
-
-//     // Check if the meta tag content has changed
-//     if (newMetaTagContent !== cachedMetaTagContent) {
-//       cachedMetaTagContent = newMetaTagContent
-
-//       // Optionally update cache or trigger cache refresh
-//       self.skipWaiting() // Forces the waiting service worker to become the active service worker
-//       // Example: caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
-//     }
-//   }
-// })
