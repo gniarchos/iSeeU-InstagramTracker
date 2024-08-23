@@ -43,19 +43,19 @@ self.addEventListener("activate", (event) => {
 })
 
 // Handle meta tag updates
-let cachedMetaTagContent = ""
+// let cachedMetaTagContent = ""
 
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "META_TAG_CONTENT") {
-    const newMetaTagContent = event.data.content
+// self.addEventListener("message", (event) => {
+//   if (event.data && event.data.type === "META_TAG_CONTENT") {
+//     const newMetaTagContent = event.data.content
 
-    // Check if the meta tag content has changed
-    if (newMetaTagContent !== cachedMetaTagContent) {
-      cachedMetaTagContent = newMetaTagContent
+//     // Check if the meta tag content has changed
+//     if (newMetaTagContent !== cachedMetaTagContent) {
+//       cachedMetaTagContent = newMetaTagContent
 
-      // Optionally update cache or trigger cache refresh
-      self.skipWaiting() // Forces the waiting service worker to become the active service worker
-      // Example: caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
-    }
-  }
-})
+//       // Optionally update cache or trigger cache refresh
+//       self.skipWaiting() // Forces the waiting service worker to become the active service worker
+//       // Example: caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+//     }
+//   }
+// })
