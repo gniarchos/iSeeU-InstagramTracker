@@ -15,12 +15,36 @@ self.addEventListener("install", (event) => {
 })
 
 // Fetch assets from cache or network
+// self.addEventListener("fetch", (event) => {
+//   event.respondWith(
+//     caches
+//       .match(event.request)
+//       .then((response) => response || fetch(event.request))
+//   )
+// })
+// Fetch assets from cache or network (with a network-first strategy for HTML files)
 self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => response || fetch(event.request))
-  )
+  if (event.request.mode === "navigate") {
+    // Handle HTML updates (network-first strategy)
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          // Save the latest HTML file in the cache
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, response.clone())
+            return response
+          })
+        })
+        .catch(() => caches.match(event.request)) // Fallback to the cached HTML if offline
+    )
+  } else {
+    // Default cache-first strategy for other assets
+    event.respondWith(
+      caches
+        .match(event.request)
+        .then((response) => response || fetch(event.request))
+    )
+  }
 })
 
 // Activate the new service worker and clean up old caches
