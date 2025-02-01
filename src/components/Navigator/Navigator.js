@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react"
 import { ProcessContext } from "../../App"
 import logo from "../../images/iSeeU-logo-white.png"
 import "./Navigator.css"
+import instagram_logo from "../../images/instagram_logo.gif"
 
 export default function About() {
   const {
@@ -37,7 +38,7 @@ export default function About() {
           Find who doesn't follow you back on Instagram!
         </h1>
         <img
-          src="https://media.giphy.com/media/IbTZSfHDUDSmOCkd3q/giphy.gif"
+          src={instagram_logo}
           className="insta-logo-gif"
           alt="instagram-logo"
         />
@@ -69,17 +70,6 @@ export default function About() {
             <i className="animation"></i>
           </button>
         )}
-
-        <span className="navigator-pwa-info">
-          <Icon icon="fluent:info-12-filled" />
-          If the app looks broken, please re-install it from{""}
-          <a
-            href="https://gniarchos.github.io/iSeeU-InstagramTracker/"
-            target="_blank"
-          >
-            iSeeU page.
-          </a>
-        </span>
       </div>
     </div>
   )

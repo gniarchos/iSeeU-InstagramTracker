@@ -47,23 +47,9 @@ nav {
   width: 120px;
 }
 
-.navigator-pwa-info {
-  display: none;
-}
-
 @media (display-mode: standalone) {
   .navigator-container {
-    padding-top: 55px;
-  }
-
-  .navigator-pwa-info {
-    color: black;
-    text-align: center;
-    font-size: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
+    /* padding-top: 55px; */
   }
 }
 

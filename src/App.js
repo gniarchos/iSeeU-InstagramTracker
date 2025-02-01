@@ -3,7 +3,7 @@ import Navigator from "./components/Navigator/Navigator"
 import LandingInfo from "./components/LandingInfo/LandingInfo"
 import Footer from "./components/Footer/Footer"
 import Finder from "./components/Finder/Finder"
-import React, { useRef, createContext, useState } from "react"
+import React, { useRef, createContext, useState, useEffect } from "react"
 import Help from "./components/Help/Help"
 
 export const ProcessContext = createContext()
@@ -15,6 +15,21 @@ function App() {
   const [showRestart, setShowRestart] = useState(false)
   const [showHelp, setShowHelp] = useState(false)
   const helpRef = useRef()
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/iSeeU-InstagramTracker/service-worker.js", {
+          scope: "/iSeeU-InstagramTracker/",
+        })
+        .then((registration) => {
+          console.log("Service Worker registered: ", registration)
+        })
+        .catch((error) => {
+          console.log("Service Worker registration failed: ", error)
+        })
+    })
+  }
 
   return (
     <div>
