@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Make status bar opaque white -->
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Enable full-screen use of safe area -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Cache control -->
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
     />
-
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
+    <!-- Charset and title -->
     <meta charset="utf-8" />
+    <title>iSeeU - Unfollowers Finder</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Theme and PWA assets -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-title" content="iSeeU" />
+    <meta name="application-name" content="iSeeU" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+
+    <!-- Icons -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -41,19 +57,109 @@
       href="%PUBLIC_URL%/public-images/safari-pinned-tab.svg?"
       color="#5bbad5"
     />
-    <meta name="apple-mobile-web-app-title" content="iSeeU" />
-    <meta name="application-name" content="iSeeU" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts and CSS -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/ios-pwa-splash@1.0.0/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Splash screen -->
+    <!-- <script src="https://unpkg.com/ios-pwa-splash@1.0.0/cdn.min.js"></script>
     <script>
       iosPWASplash("%PUBLIC_URL%/public-images/original.png?", "#ffffff")
-    </script>
-    <title>iSeeU - Unfollowers Finder</title>
+    </script> -->
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_14_15_Pro_Max__iPhone_14_15_Plus__iPhone_14_15_Pro__iPhone_14_15_portrait.png"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_14_15_Pro_Max__iPhone_14_15_Plus__iPhone_14_15_Pro__iPhone_14_15_landscape.png"
+      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_12_13_14_portrait.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_12_13_14_landscape.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_11_Pro_XS_X_portrait.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_11_Pro_XS_X_landscape.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_SE_1st_Gen__iPod_touch_7th_gen_portrait.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPhone_SE_1st_Gen__iPod_touch_7th_gen_landscape.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Mini__iPad_5th_to_9th_gen_portrait.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Mini__iPad_5th_to_9th_gen_landscape.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_10.5_portrait.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_10.5_landscape.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_11_portrait.png"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_11_landscape.png"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_12.9_portrait.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="%PUBLIC_URL%/splash_screens/iPad_Pro_12.9_landscape.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
   </head>
   <body>
     <div id="root"></div>
