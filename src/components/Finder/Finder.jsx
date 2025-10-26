@@ -43,20 +43,19 @@ export default function Finder() {
           const buffer = await fileUploaded.arrayBuffer()
           const zipContent = await zip.loadAsync(buffer)
 
-          const file1 = zipContent.file(
+          const following_list = zipContent.file(
             "connections/followers_and_following/following.json"
           )
-          const file2 = zipContent.file(
+          const followers_list = zipContent.file(
             "connections/followers_and_following/followers_1.json"
           )
 
-          if (file1) {
-            const followingFile = await file1.async("text")
+          if (following_list) {
+            const followingFile = await following_list.async("text")
             var obj = JSON.parse(followingFile)
 
             for (var i = 0; i < obj.relationships_following.length; i++) {
-              let user =
-                obj.relationships_following[i].string_list_data[0].value
+              let user = obj.relationships_following[i].title
               let user_link =
                 obj.relationships_following[i].string_list_data[0].href
               let date_followed = new Date(
@@ -75,8 +74,8 @@ export default function Finder() {
             )
           }
 
-          if (file2) {
-            const followersFile = await file2.async("text")
+          if (followers_list) {
+            const followersFile = await followers_list.async("text")
 
             var obj = JSON.parse(followersFile)
 
@@ -118,14 +117,17 @@ export default function Finder() {
     multiple: false,
   })
 
+  console.log("followers", followers)
+  console.log("following", following)
+
   const baseStyle = {
     flex: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     padding: "20px",
-    paddingTop: "100px",
-    paddingBottom: "100px",
+    paddingTop: "50px",
+    paddingBottom: "50px",
     width: "90vw",
     borderWidth: 2,
     borderRadius: 2,
@@ -153,9 +155,7 @@ export default function Finder() {
     return function (current) {
       return (
         otherArray.filter(function (other) {
-          return (
-            other.user === current.user && other.user_link === current.user_link
-          )
+          return other.user === current.user
         }).length === 0
       )
     }
@@ -192,7 +192,7 @@ export default function Finder() {
                   <p>Please upload the zip file here...</p>
                 ) : (
                   <>
-                    <p
+                    <span
                       style={{
                         color: "green",
                         display: "flex",
@@ -202,7 +202,7 @@ export default function Finder() {
                     >
                       <Icon icon="icon-park-solid:success" width={20} />
                       The file is uploaded successfully!
-                    </p>
+                    </span>
                     <span>
                       File Downloaded Date:{" "}
                       {`${fileCreatedDate.getDate()}/${
@@ -247,7 +247,7 @@ export default function Finder() {
             <button
               disabled={fileUploaded === null}
               onClick={showResults}
-              className="app-actions-button"
+              className="app-actions-button finder-show-results-button"
             >
               <i className={fileUploaded !== null ? "animation" : null}></i>
               Show Results
