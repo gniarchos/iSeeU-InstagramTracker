@@ -1,7 +1,8 @@
 import React, { useContext } from "react"
 import { Icon } from "@iconify/react"
 import { ProcessContext } from "../../App"
-import logo from "../../images/iSeeU-logo-white.png"
+// import logo from "../../images/iSeeU-logo-white.png"
+import logo from "/assets/public-images/iseeu-logo-small.png"
 import "./Navigator.css"
 import instagram_logo from "../../images/instagram_logo.gif"
 
@@ -48,6 +49,7 @@ export default function About() {
             <i className="animation stopped"></i>
 
             {showHelp === true ? "Go Back" : "Get Help"}
+
             <i className="animation stopped"></i>
           </button>
         )}

@@ -5,7 +5,7 @@ export default function Help() {
   return (
     <div className="help-wrapper">
       <h1 className="help-title">Guide: How to download the zip file</h1>
-      <p className="help-source">Updated: 18/08/2024</p>
+      <p className="help-source">Updated: 26/10/2025</p>
 
       <div>
         <div className="help-methods">
@@ -25,24 +25,27 @@ export default function Help() {
             </li>
             <li className="li-mobile">
               Tap on <b>Settings</b> icon in the top right and then{" "}
-              <b>Your Activity</b>.
+              <b>Accounts Center</b>.
             </li>
             <li className="li-mobile">
-              Tap <b>Download your information.</b>
+              Under Account Settings, select{" "}
+              <b>Your Information and Permissions</b>.
             </li>
             <li className="li-mobile">
-              Tap <b>Download or transfer information</b>.
+              Then tap <b>Export your information</b>.
             </li>
             <li className="li-mobile">
-              Select your instagram account you want to download your data and
-              tap <b>Next</b>.
+              Tap <b>Create export</b>.
             </li>
             <li className="li-mobile">
-              Tap <b>Some of your information</b> and then select only{" "}
-              <b>Followers and following</b> and tap <b>Next</b>.
+              Select your instagram account you want to download your data.
             </li>
             <li className="li-mobile">
-              Tap <b>Download to device</b> and then tap <b>Next</b>.
+              Set <b>Export to Device</b>.
+            </li>
+            <li className="li-mobile">
+              Under <b>Customize information</b> clear all sections, select only{" "}
+              <b>Followers and following</b> and tap <b>Save</b>.
             </li>
             <li className="li-mobile">
               <u>
@@ -55,30 +58,31 @@ export default function Help() {
               <u>
                 <b style={{ color: "red" }}>IMPORTANT!</b>
               </u>
-              &nbsp;Tap <b>Format</b> and select <b>JSON</b>, then tap <b>X.</b>
+              &nbsp;Tap <b>Format</b> and select <b>JSON</b>, then tap{" "}
+              <b>Save.</b>
             </li>
             <li className="li-mobile">
-              Finally tap <b>Create files.</b>
+              Finally tap <b>Start export.</b>
             </li>
             <li className="li-mobile">
               You'll soon receive an email from Instagram and follow
               instructions to download your file.
             </li>
             <li className="li-mobile">
-              Save the file somewhere in your filesystem of your mobile and{" "}
-              <b>upload that zip file to the iSeeU app.</b>
+              Save the file somewhere in your filesystem of your device and{" "}
+              <b>
+                upload that <b>zip file</b> to the iSeeU.
+              </b>
             </li>
             <li className="li-mobile">
-              <b>Enjoy!</b>
+              <b>Enjoy! 🎉</b>
             </li>
           </ol>
         </div>
 
         <div className="help-methods">
           <div className="help-title-container">
-            <h2 className="help-methods-title">
-              More Methods: <u>PC</u> and <u>Mobile</u> website
-            </h2>
+            <h2 className="help-methods-title">Learn More</h2>
           </div>
 
           <p>
@@ -86,6 +90,7 @@ export default function Help() {
             <a
               className="help-source-link"
               href="https://help.instagram.com/181231772500920"
+              target="_blank"
             >
               Instagram Help Center
             </a>

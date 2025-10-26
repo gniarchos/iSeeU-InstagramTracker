@@ -40,8 +40,11 @@ export default function Results({ notFollowingBack }) {
         <span className="results-about-text">
           See who’s ghosting your follow 👻
         </span>
-        <span style={{ marginTop: "-30px" }} className="results-about-text">
-          Note that <b>deleted accounts</b> may appear in this list.
+        <span
+          style={{ marginTop: "-30px", marginBottom: "-10px" }}
+          className="results-about-text"
+        >
+          Note that <b>deactivated accounts</b> may appear in this list.
         </span>
       </div>
       <table>
@@ -49,14 +52,14 @@ export default function Results({ notFollowingBack }) {
           <tr>
             <th style={{ width: "5%" }}>#</th>
             <th>Username</th>
-            <th style={{ width: "20%" }}>Date followed</th>
-            <th style={{ width: "10%" }}>Link</th>
+            <th style={{ width: "20%" }}>Followers Since</th>
+            <th style={{ width: "10%" }}>Profile</th>
           </tr>
           {notFollowingBack.length > 0 ? (
             notFollowersList
           ) : (
             <tr>
-              <td colSpan="4">WOW! Nothing found</td>
+              <td colSpan="4">WOW! Nothing was found</td>
             </tr>
           )}
         </tbody>
