@@ -37,7 +37,12 @@ export default function Results({ notFollowingBack }) {
     <div className="results-list-wrapper">
       <div className="results-info">
         <h1 className="results-title">Users who don't follow you back</h1>
-        <p className="results-about-text">The moment of truth.</p>
+        <span className="results-about-text">
+          See who’s ghosting your follow 👻
+        </span>
+        <span style={{ marginTop: "-30px" }} className="results-about-text">
+          Note that <b>deleted accounts</b> may appear in this list.
+        </span>
       </div>
       <table>
         <tbody>

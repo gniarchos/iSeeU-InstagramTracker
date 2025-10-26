@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App">
       <ProcessContext.Provider
         value={{
           process,

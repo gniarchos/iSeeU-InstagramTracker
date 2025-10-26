@@ -5,9 +5,11 @@
   align-items: center;
   justify-content: center;
   /* gap: 50px; */
+  width: 100%;
   margin-top: 80px;
   opacity: 0;
   margin-bottom: 50px;
+  height: 50%;
 }
 
 @keyframes goingIn {
@@ -88,9 +90,14 @@
   .finder-upload-file-container {
     flex-direction: column;
     gap: 30px;
+    margin-top: -20px;
   }
 
   .finder-error-icon {
     font-size: 3rem;
+  }
+
+  .finder-show-results-button {
+    margin-top: -40px;
   }
 }
