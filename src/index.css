@@ -94,3 +94,20 @@ body {
   justify-content: space-between;
   min-height: 100vh;
 }
+
+.app-version {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #f0f0f0b9;
+  position: relative;
+  top: 15px;
+  left: -10px;
+}
+
+@media (max-width: 768px) {
+  .app-version {
+    top: 10px;
+    left: -8px;
+    font-size: 0.7rem;
+  }
+}

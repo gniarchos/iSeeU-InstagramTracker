@@ -28,13 +28,18 @@ export default function About() {
 
   return (
     <div className="navigator-container">
-      <nav>
+      <nav
+        style={{
+          position: "relative",
+        }}
+      >
         <img
           className="logo-img"
           src={logo}
           onClick={() => window.location.reload()}
           alt="logo"
         />
+        <span className="app-version">v{__APP_VERSION__}</span>
       </nav>
       <div className="navigator-about">
         <h1 className="navigator-title">
