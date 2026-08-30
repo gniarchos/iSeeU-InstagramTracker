@@ -5,71 +5,65 @@ export default function Help() {
   return (
     <div className="help-wrapper">
       <h1 className="help-title">Guide: How to download the zip file</h1>
-      <p className="help-source">Updated: 26/10/2025</p>
+      <p className="help-source">Updated: 30/08/2026</p>
 
       <div>
         <div className="help-methods">
           <div className="help-title-container">
-            <h2 className="help-methods-title">
-              <u>iOS</u> and <u>Android</u> app
-            </h2>
+            <h2 className="help-methods-title">Step by step guide</h2>
           </div>
 
           <ol>
-            <li className="li-computer">
-              Download Instagram app and <b>Login</b> to your account.
+            <li className="li-computer">Go to Instagram</li>
+            <li className="li-mobile">
+              Go to <b>Settings</b>
             </li>
             <li className="li-mobile">
-              Tap your profile picture in the bottom right to go to your
-              profile.
+              Then <b>Accounts Center</b>
             </li>
             <li className="li-mobile">
-              Tap on <b>Settings</b> icon in the top right and then{" "}
-              <b>Accounts Center</b>.
+              Find and select <b>Your information and permissions</b>
             </li>
             <li className="li-mobile">
-              Under Account Settings, select{" "}
-              <b>Your Information and Permissions</b>.
+              Then <b>Export your information</b>
             </li>
             <li className="li-mobile">
-              Then tap <b>Export your information</b>.
+              Select <b>Create export</b>
             </li>
             <li className="li-mobile">
-              Tap <b>Create export</b>.
+              Choose your <b>Instagram account</b>
             </li>
             <li className="li-mobile">
-              Select your instagram account you want to download your data.
+              Select <b>Export to Device</b>.
             </li>
             <li className="li-mobile">
-              Set <b>Export to Device</b>.
-            </li>
-            <li className="li-mobile">
-              Under <b>Customize information</b> clear all sections, select only{" "}
-              <b>Followers and following</b> and tap <b>Save</b>.
+              <u>
+                <b style={{ color: "red" }}>IMPORTANT!</b>
+              </u>{" "}
+              Under <b>Customize information</b> clear every section and select
+              only <b>Followers and following</b>
             </li>
             <li className="li-mobile">
               <u>
                 <b style={{ color: "red" }}>IMPORTANT!</b>
               </u>
-              &nbsp;Tap <b>Date range</b> and select <b>All time</b>, then tap{" "}
-              <b>Save</b>.
+              &nbsp;Select <b>Date range</b> and select <b>All time</b>
             </li>
             <li className="li-mobile">
               <u>
                 <b style={{ color: "red" }}>IMPORTANT!</b>
               </u>
-              &nbsp;Tap <b>Format</b> and select <b>JSON</b>, then tap{" "}
-              <b>Save.</b>
+              &nbsp;Tap <b>Format</b> and select <b>JSON</b>
             </li>
             <li className="li-mobile">
-              Finally tap <b>Start export.</b>
+              Select <b>Start export</b>
             </li>
             <li className="li-mobile">
               You'll soon receive an email from Instagram and follow
               instructions to download your file.
             </li>
             <li className="li-mobile">
-              Save the file somewhere in your filesystem of your device and{" "}
+              Save the file somewhere in your device and{" "}
               <b>
                 upload that <b>zip file</b> to the iSeeU.
               </b>
