@@ -11,9 +11,12 @@ import "./Finder.css"
 import { useDropzone } from "react-dropzone"
 import JSZip from "jszip"
 import Results from "../Results/Results"
+import NotListedLocationRoundedIcon from "@mui/icons-material/NotListedLocationRounded"
+import Button from "@mui/material/Button"
 
 export default function Finder() {
-  const { process, setShowRestart } = useContext(ProcessContext)
+  const { process, setShowRestart, setShowHelp, showHelp } =
+    useContext(ProcessContext)
 
   const [following, setFollowing] = useState([])
   const [followers, setFollowers] = useState([])
@@ -44,10 +47,10 @@ export default function Finder() {
           const zipContent = await zip.loadAsync(buffer)
 
           const following_list = zipContent.file(
-            "connections/followers_and_following/following.json"
+            "connections/followers_and_following/following.json",
           )
           const followers_list = zipContent.file(
-            "connections/followers_and_following/followers_1.json"
+            "connections/followers_and_following/followers_1.json",
           )
 
           if (following_list) {
@@ -60,7 +63,7 @@ export default function Finder() {
                 obj.relationships_following[i].string_list_data[0].href
               let date_followed = new Date(
                 obj.relationships_following[i].string_list_data[0].timestamp *
-                  1000
+                  1000,
               )
 
               setFollowing((prevData) => [
@@ -70,7 +73,7 @@ export default function Finder() {
             }
           } else {
             throw new Error(
-              "The file you uploaded is not a valid Instagram zip. Please try again."
+              "The file you uploaded is not a valid Instagram zip. Please try again.",
             )
           }
 
@@ -83,7 +86,7 @@ export default function Finder() {
               let user = obj[i].string_list_data[0].value
               let user_link = obj[i].string_list_data[0].href
               let date_followed = new Date(
-                obj[i].string_list_data[0].timestamp * 1000
+                obj[i].string_list_data[0].timestamp * 1000,
               )
 
               setFollowers((prevData) => [
@@ -93,7 +96,7 @@ export default function Finder() {
             }
           } else {
             throw new Error(
-              "The file you uploaded is not a valid Instagram zip. Please try again."
+              "The file you uploaded is not a valid Instagram zip. Please try again.",
             )
           }
 
@@ -148,7 +151,7 @@ export default function Finder() {
       ...baseStyle,
       ...(isFocused ? focusedStyle : {}),
     }),
-    [isFocused]
+    [isFocused],
   )
 
   function comparer(otherArray) {
@@ -165,11 +168,35 @@ export default function Finder() {
     if (fileUploaded !== null) {
       setShowRestart(true)
       setError("")
-      setNotFollowingBack(following.filter(comparer(followers)))
+
+      const previousSessionData = localStorage.getItem(
+        "notFollowingBack_last_session",
+      )
+      const previousList = previousSessionData
+        ? JSON.parse(previousSessionData)
+        : []
+
+      const rawList = following.filter(comparer(followers))
+      const listWithFlags = rawList.map((current) => {
+        const wasInPrevious = previousList.some(
+          (prev) => prev.user === current.user,
+        )
+
+        return {
+          ...current,
+          is_new: !wasInPrevious,
+        }
+      })
+
+      setNotFollowingBack(listWithFlags)
       setShowReport(true)
+
+      localStorage.setItem(
+        "notFollowingBack_last_session",
+        JSON.stringify(rawList),
+      )
     }
   }
-
   return (
     <div className={process === true && "finder-wrapper"}>
       <div className="finder-container">
@@ -180,6 +207,14 @@ export default function Finder() {
               Upload the <b>zip file</b> that you downloaded to obtain a list of
               users who don't follow you back.
             </p>
+            <Button
+              sx={{ textTransform: "none" }}
+              type="primary"
+              startIcon={<NotListedLocationRoundedIcon />}
+              onClick={() => setShowHelp(!showHelp)}
+            >
+              Help: How to download my zip file?
+            </Button>
           </div>
         )}
 

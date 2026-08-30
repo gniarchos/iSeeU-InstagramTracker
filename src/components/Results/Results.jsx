@@ -1,8 +1,13 @@
 import React from "react"
 import "./Results.css"
 import { Icon } from "@iconify/react/dist/iconify.js"
+import { Alert, Chip } from "@mui/material"
 
 export default function Results({ notFollowingBack }) {
+  console.log(notFollowingBack)
+  const newUnfollowersCount =
+    notFollowingBack?.filter((user) => user.is_new).length || 0
+
   const notFollowersList = notFollowingBack
     .sort((a, b) => b.date_followed - a.date_followed)
     .map((user, index) => {
@@ -12,13 +17,32 @@ export default function Results({ notFollowingBack }) {
         day: "numeric",
       }
       const formattedDate = new Intl.DateTimeFormat("el-GR", options).format(
-        user.date_followed
+        user.date_followed,
       )
 
       return (
         <tr>
           <td>{index + 1}</td>
-          <td>{user.user}</td>
+          <td>
+            {user.user}{" "}
+            {user.is_new && (
+              <Chip
+                size="small"
+                label="NEW"
+                sx={{
+                  backgroundColor: "#f1f1f1bc",
+                  color: "#911515",
+                  borderRadius: "5px",
+                  height: "1.2rem",
+                  "& .MuiChip-label": {
+                    fontWeight: 600,
+                    fontSize: "0.6rem",
+                    px: 1, // προαιρετικό padding αν θες να το ρυθμίσεις
+                  },
+                }}
+              />
+            )}
+          </td>
           <td>{formattedDate}</td>
           <td>
             <a
@@ -38,14 +62,23 @@ export default function Results({ notFollowingBack }) {
       <div className="results-info">
         <h1 className="results-title">Users who don't follow you back</h1>
         <span className="results-about-text">
-          See who’s ghosting your follow 👻
+          The moment of truth. See who’s ghosting your follow 👻
         </span>
-        <span
-          style={{ marginTop: "-30px", marginBottom: "-10px" }}
-          className="results-about-text"
-        >
+        <Alert severity="info">
           Note that <b>deactivated accounts</b> may appear in this list.
-        </span>
+        </Alert>
+        {notFollowingBack.length > 0 &&
+          (newUnfollowersCount > 0 ? (
+            <Alert icon={false} severity="error">
+              <span>
+                <b>{newUnfollowersCount}</b> new accounts found
+              </span>
+            </Alert>
+          ) : (
+            <Alert icon={false} severity="success">
+              <span>🎉 No new accounts found! 🎉</span>
+            </Alert>
+          ))}
       </div>
       <table>
         <tbody>
