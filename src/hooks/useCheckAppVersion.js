@@ -5,8 +5,7 @@ export function useCheckAppVersion() {
 
   const checkAppVersion = async () => {
     try {
-      const baseUrl = import.meta.env.BASE_URL
-      const response = await fetch(`${baseUrl}/version.json?t=${Date.now()}`)
+      const response = await fetch(`/version.json?t=${Date.now()}`)
       const data = await response.json()
 
       if (data.version !== __APP_VERSION__) {
