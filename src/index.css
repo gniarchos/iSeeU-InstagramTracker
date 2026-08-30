@@ -35,7 +35,6 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 1.2px;
-  text-transform: uppercase;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -63,21 +62,27 @@ body {
 
 .app-actions-button .animation.stopped {
   animation: none;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
-    0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+  box-shadow:
+    0 0 0 0 rgba(255, 255, 255, 0.1),
+    0 0 0 20px rgba(255, 255, 255, 0.1),
+    0 0 0 40px rgba(255, 255, 255, 0.1),
     0 0 0 60px rgba(255, 255, 255, 0.1);
 }
 
 @keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
-      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+    box-shadow:
+      0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1),
       0 0 0 60px rgba(255, 255, 255, 0.1);
   }
 
   100% {
-    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
-      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+    box-shadow:
+      0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1),
       0 0 0 80px rgba(255, 255, 255, 0);
   }
 }
