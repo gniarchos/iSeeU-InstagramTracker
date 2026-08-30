@@ -26,7 +26,7 @@ function App() {
   const { isUpdateAvailable, checkAppVersion } = useCheckAppVersion()
 
   useEffect(() => {
-    if (import.meta.env.DEV) return
+    // if (import.meta.env.DEV) return
 
     checkAppVersion()
 
@@ -93,14 +93,21 @@ function App() {
             action={action}
             severity="warning"
           >
-            <AlertTitle sx={{ fontWeight: "600" }}>
+            <AlertTitle
+              sx={{
+                fontWeight: "600",
+                fontSize: isMobile ? "0.9rem" : "1rem",
+              }}
+            >
               New App Version Available
             </AlertTitle>
-            The latest version of the app is now available. Press{" "}
-            <b style={{ color: "#ff3131" }} className="fw-bold">
-              Update
-            </b>{" "}
-            now!
+            <span style={{ fontSize: isMobile ? "0.8rem" : "0.9rem" }}>
+              The latest version of the app is now available. Press{" "}
+              <b style={{ color: "#ff3131" }} className="fw-bold">
+                Update
+              </b>{" "}
+              now!
+            </span>
           </Alert>
         )}
         {process === false && showHelp === false && <LandingInfo />}
