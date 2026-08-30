@@ -1,7 +1,7 @@
 {
   "homepage": "https://gniarchos.github.io/iSeeU-InstagramTracker",
   "name": "iseeu-unfollowers",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -19,10 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "postversion": "node update_version.js",
+    "prebuild": "node update_version.js",
     "dev": "vite",
-    "build": "vite build",
+    "build": "node update_version.js && vite build",
     "preview": "vite preview",
-    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
