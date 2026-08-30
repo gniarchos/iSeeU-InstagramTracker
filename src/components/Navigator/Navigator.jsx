@@ -5,6 +5,8 @@ import { ProcessContext } from "../../App"
 import logo from "/assets/public-images/iseeu-logo-small.png"
 import "./Navigator.css"
 import instagram_logo from "../../images/instagram_logo.gif"
+import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded"
+import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded"
 
 export default function About() {
   const {
@@ -44,23 +46,21 @@ export default function About() {
           alt="instagram-logo"
         />
 
-        {process && !showRestart && (
+        {process && !showRestart && showHelp && (
           <button onClick={sendHelp} className="app-actions-button">
             <i className="animation stopped"></i>
-
-            {showHelp === true ? "Go Back" : "Get Help"}
-
+            <ArrowBackRoundedIcon /> Go Back
             <i className="animation stopped"></i>
           </button>
         )}
 
-        {process && showRestart && (
+        {process && !showHelp && (
           <button
             onClick={() => window.location.reload()}
             className="app-actions-button"
           >
             <i className="animation"></i>
-            Restart
+            <RestartAltRoundedIcon /> Restart Process
             <i className="animation"></i>
           </button>
         )}
